@@ -1,0 +1,96 @@
+# CalculateG
+1.Create a new class called CalculateG. 
+2.Copy and paste the following initial versionof the code. Note variablesdeclarationandthe types. 
+class CalculateG{ 
+public static void main(String[] arguments){ 
+(datatype) gravity=-9.81; // Earth's gravity in m/s^2
+(datatype) fallingTime= 30; 
+(datatype)initialVelocity= 0.0; 
+(datatype) finalVelocity= ; 
+(datatype) initialPosition= 0.0; 
+(datatype) finalPosition= ; 
+// Add the formulas for position and velocity 
+System.out.println("The object's position after " + fallingTime + " seconds is " 
++ finalPosition + " m."); 
+// Add output line for velocity (similar to position) 
+} 
+} 
+3.Modify the example program to compute the position and velocity of an object after 
+falling for 30seconds, outputting the position in meters. The formula in Math 
+notation is: 
+𝑥(𝑡) = 0.5 ∗𝑎𝑡2+ 𝑣𝑖𝑡+ 𝑥𝑖
+𝑣(𝑡) = 𝑎𝑡+ 𝑣𝑖 
+*Answer
+class CalculateG { 
+  public static void main(String[] arguments) { 
+    double gravity = -9.81; // Earth's gravity in m/s^2
+    double fallingTime = 30; 
+    double initialVelocity = 0.0; 
+    double finalVelocity = gravity * fallingTime + initialVelocity; 
+    double initialPosition = 0.0; 
+    double finalPosition = 0.5 * gravity * fallingTime * fallingTime 
+                            + initialVelocity * fallingTime + initialPosition; 
+    // Add the formulas for position and velocity 
+    System.out.println("The object's position after " + fallingTime + " seconds is " 
+                       + finalPosition + " m."); 
+    System.out.println("The object's velocity after " + fallingTime + " seconds is " 
+                       + finalVelocity + " m/s."); 
+  } 
+}
+4.Run the completed code in Eclipse (Run → Run As → Java Application).
+5.Extend datatypeclass with the following code: 
+publicclassCalculateG{ 
+publicstaticdoublemulti(……){ 
+// method for multiplication
+} 
+// add 2 more methods for powering to square and summation (similar to multiplication)
+publicstaticvoidoutline(……){ 
+// method for printing out a result
+} 
+publicstaticvoidmain(String[] args) { 
+// compute the position and velocity of an object with defined methods and print out the 
+result 
+}
+}
+*Answer
+public class CalculateG {
+    public static double multiply(double num1, double num2) {
+        return num1 * num2;
+    }
+    
+    public static double square(double num) {
+        return Math.pow(num, 2);
+    }
+    
+    public static double sum(double num1, double num2) {
+        return num1 + num2;
+    }
+    
+    public static void outline(String message) {
+        System.out.println(message);
+    }
+    
+    public static void main(String[] args) {
+        // compute the position and velocity of an object with defined methods and print out the result
+        double position = multiply(10, 2); // calculate position
+        double velocity = sum(square(10), 5); // calculate velocity
+        String result = "Position: " + position + ", Velocity: " + velocity;
+        outline(result); // print out the result
+    }
+}
+
+6.Create methods for multiplication, powering to square, summation and printing out a result in 
+CalculateGclass.
+*Answer
+class CalculateG:
+    def multiply(self, x, y):
+        return x * y
+    
+    def square(self, x):
+        return x ** 2
+    
+    def sum(self, nums):
+        return sum(nums)
+    
+    def print_result(self, result):
+        print(result)
